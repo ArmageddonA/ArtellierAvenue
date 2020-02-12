@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewBag.Title = "Artelier Ave | ProductName";
+}
+<h1 class="page-heading show-on-scroll">Item Name</h1>
+
+<div class="center">
+    <img class="product-pic show-on-scroll" src="https://via.placeholder.com/700x800" />
+    <img class="product-pic show-on-scroll" src="https://via.placeholder.com/700x800" />
+    <img class="product-pic show-on-scroll" src="https://via.placeholder.com/700x800" />
+    <img class="product-pic show-on-scroll" src="https://via.placeholder.com/700x800" />
+    <img class="product-pic show-on-scroll" src="https://via.placeholder.com/700x800" />
+</div>
+
+<div class="accordion custom-btn">Product Information <i class="accordian-icon fas fa-chevron-down"></i></div>
+<div class=" prod-panel">
+    <p>Lorem ipsum...</p>
+</div>
+<hr />
+
+<div class="accordion custom-btn">Size Guide <i class="accordian-icon fas fa-chevron-down"></i></div>
+<div class=" prod-panel">
+    <p>Lorem ipsum...</p>
+</div>
+<hr />
+
+<div class="accordion custom-btn">Return Policy <i class="accordian-icon fas fa-chevron-down"></i></div>
+<div class=" prod-panel">
+    <p>Lorem ipsum...</p>
+</div>
+<hr />
+<div class="accordion custom-btn">More from this brand <i class="accordian-icon fas fa-chevron-down"></i></div>
+<div class=" prod-panel">
+    <p>Lorem ipsum...</p>
+</div>
+
+@section scripts {
+    <script type="text/javascript">
+        // Detect request animation frame
+        var scroll = window.requestAnimationFrame ||
+            // IE Fallback
+            function (callback) { window.setTimeout(callback, 1000 / 60) };
+        var elementsToShow = document.querySelectorAll('.show-on-scroll');
+        var elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+
+        function loop() {
+
+            Array.prototype.forEach.call(elementsToShow, function (element) {
+                if (isElementInViewport(element)) {
+                    element.classList.add('is-visible');
+                } else {
+                    element.classList.remove('is-visible');
+                }
+            });
+
+
+            scroll(loop);
+        }
+
+        // Call the loop for the first time
+        loop();
+
+        // Helper function from: http://stackoverflow.com/a/7557433/274826
+        function isElementInViewport(el) {
+            // special bonus for those using jQuery
+            if (typeof jQuery === "function" && el instanceof jQuery) {
+                el = el[0];
+            }
+            var rect = el.getBoundingClientRect();
+            return (
+                (rect.top <= 0
+                    && rect.bottom >= 0)
+                ||
+                (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+                ||
+                (rect.top >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+            );
+        }
+
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+                //this.querySelector("fa-chevron-down").classList.toggle("fa-flip-horizontal");
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.height === "300px") {
+                    panel.style.height = "0";
+                    panel.style.opacity = "0";
+                } else {
+                    panel.style.height = "300px";
+                    panel.style.opacity = "1";
+                }
+            });
+        }
+    </script>
+}

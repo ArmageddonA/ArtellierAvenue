@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ArtelierAvenueModelStoreContainer" CdmEntityContainer="ArtelierAvenueEntities">
+    <EntitySetMapping Name="Articles">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.Article">
+        <MappingFragment StoreEntitySet="Article">
+          <ScalarProperty Name="ArticleID" ColumnName="ArticleID" />
+          <ScalarProperty Name="ArticleContents" ColumnName="ArticleContents" />
+          <ScalarProperty Name="DateUploaded" ColumnName="DateUploaded" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.Client">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Featureds">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.Featured">
+        <MappingFragment StoreEntitySet="Featured">
+          <ScalarProperty Name="FeaturedID" ColumnName="FeaturedID" />
+          <ScalarProperty Name="FeatureDate" ColumnName="FeatureDate" />
+          <ScalarProperty Name="FeaturedTitle" ColumnName="FeaturedTitle" />
+          <ScalarProperty Name="FeaturedDescription" ColumnName="FeaturedDescription" />
+          <ScalarProperty Name="FeaturedLink" ColumnName="FeaturedLink" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ListingPictures">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.ListingPicture">
+        <MappingFragment StoreEntitySet="ListingPicture">
+          <ScalarProperty Name="ListingPictureID" ColumnName="ListingPictureID" />
+          <ScalarProperty Name="ListingID" ColumnName="ListingID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ListingStatus">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.ListingStatu">
+        <MappingFragment StoreEntitySet="ListingStatus">
+          <ScalarProperty Name="ListingStatusIID" ColumnName="ListingStatusIID" />
+          <ScalarProperty Name="ListingDescription" ColumnName="ListingDescription" />
+          <ScalarProperty Name="ListingName" ColumnName="ListingName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locations">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.Location">
+        <MappingFragment StoreEntitySet="Location">
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="StreetAddress" ColumnName="StreetAddress" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderReturns">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.OrderReturn">
+        <MappingFragment StoreEntitySet="OrderReturn">
+          <ScalarProperty Name="OrderReturnID" ColumnName="OrderReturnID" />
+          <ScalarProperty Name="RequestDate" ColumnName="RequestDate" />
+          <ScalarProperty Name="RecieveDate" ColumnName="RecieveDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prices">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.Price">
+        <MappingFragment StoreEntitySet="Price">
+          <ScalarProperty Name="PriceID" ColumnName="PriceID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Sale" ColumnName="Sale" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ComissionPrice" ColumnName="ComissionPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+          <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+          <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
+          <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+          <ScalarProperty Name="PriceID" ColumnName="PriceID" />
+          <ScalarProperty Name="ComissionPrice" ColumnName="ComissionPrice" />
+          <ScalarProperty Name="ProductStatusID" ColumnName="ProductStatusID" />
+          <ScalarProperty Name="WishlListCount" ColumnName="WishlListCount" />
+          <ScalarProperty Name="ProductColorID" ColumnName="ProductColorID" />
+          <ScalarProperty Name="ProductSizeID" ColumnName="ProductSizeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductClassifications">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.ProductClassification">
+        <MappingFragment StoreEntitySet="ProductClassification">
+          <ScalarProperty Name="ProductClassificationID" ColumnName="ProductClassificationID" />
+          <ScalarProperty Name="ProductClassificationDescription" ColumnName="ProductClassificationDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductColors">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.ProductColor">
+        <MappingFragment StoreEntitySet="ProductColor">
+          <ScalarProperty Name="ProductColourID" ColumnName="ProductColourID" />
+          <ScalarProperty Name="ProductColourDescription" ColumnName="ProductColourDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductListings">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.ProductListing">
+        <MappingFragment StoreEntitySet="ProductListing">
+          <ScalarProperty Name="ProductListingID" ColumnName="ProductListingID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ProductListingTypeID" ColumnName="ProductListingTypeID" />
+          <ScalarProperty Name="ProductListingName" ColumnName="ProductListingName" />
+          <ScalarProperty Name="ProductListingDescription" ColumnName="ProductListingDescription" />
+          <ScalarProperty Name="ProductListingPrice" ColumnName="ProductListingPrice" />
+          <ScalarProperty Name="ProductListingDate" ColumnName="ProductListingDate" />
+          <ScalarProperty Name="ProductListingStatusID" ColumnName="ProductListingStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductMaterials">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.ProductMaterial">
+        <MappingFragment StoreEntitySet="ProductMaterial">
+          <ScalarProperty Name="ProductMaterialID" ColumnName="ProductMaterialID" />
+          <ScalarProperty Name="ProductMaterialName" ColumnName="ProductMaterialName" />
+          <ScalarProperty Name="ProductMaterialDescription" ColumnName="ProductMaterialDescription" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductOrders">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.ProductOrder">
+        <MappingFragment StoreEntitySet="ProductOrder">
+          <ScalarProperty Name="ProductOrderID" ColumnName="ProductOrderID" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="ProductOrderStatusID" ColumnName="ProductOrderStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductOrderLines">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.ProductOrderLine">
+        <MappingFragment StoreEntitySet="ProductOrderLine">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductSizeID" ColumnName="ProductSizeID" />
+          <ScalarProperty Name="PriceID" ColumnName="PriceID" />
+          <ScalarProperty Name="ProductCount" ColumnName="ProductCount" />
+          <ScalarProperty Name="ProductOrderID" ColumnName="ProductOrderID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductOrderStatus">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.ProductOrderStatu">
+        <MappingFragment StoreEntitySet="ProductOrderStatus">
+          <ScalarProperty Name="ProductOrderStatusID" ColumnName="ProductOrderStatusID" />
+          <ScalarProperty Name="ProductOrderStatusName" ColumnName="ProductOrderStatusName" />
+          <ScalarProperty Name="ProductOrderStatusDescription" ColumnName="ProductOrderStatusDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductPictures">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.ProductPicture">
+        <MappingFragment StoreEntitySet="ProductPicture">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="ProductPictureID" ColumnName="ProductPictureID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductSizes">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.ProductSize">
+        <MappingFragment StoreEntitySet="ProductSize">
+          <ScalarProperty Name="ProductSizeID" ColumnName="ProductSizeID" />
+          <ScalarProperty Name="ProductSizeDescription" ColumnName="ProductSizeDescription" />
+          <ScalarProperty Name="ProductSizeCount" ColumnName="ProductSizeCount" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductStatus">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.ProductStatu">
+        <MappingFragment StoreEntitySet="ProductStatus">
+          <ScalarProperty Name="ProductStatusID" ColumnName="ProductStatusID" />
+          <ScalarProperty Name="ProductStatusName" ColumnName="ProductStatusName" />
+          <ScalarProperty Name="ProductStatusDescription" ColumnName="ProductStatusDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductTypes">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.ProductType">
+        <MappingFragment StoreEntitySet="ProductType">
+          <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+          <ScalarProperty Name="ProductTypeName" ColumnName="ProductTypeName" />
+          <ScalarProperty Name="ProductTypeDescription" ColumnName="ProductTypeDescription" />
+          <ScalarProperty Name="ProductClassificationID" ColumnName="ProductClassificationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReturnLines">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.ReturnLine">
+        <MappingFragment StoreEntitySet="ReturnLine">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="OrderReturnID" ColumnName="OrderReturnID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleDescription" ColumnName="RoleDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceListings">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.ServiceListing">
+        <MappingFragment StoreEntitySet="ServiceListing">
+          <ScalarProperty Name="ServiceListingID" ColumnName="ServiceListingID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ServiceListingTypeID" ColumnName="ServiceListingTypeID" />
+          <ScalarProperty Name="ServiceListingDate" ColumnName="ServiceListingDate" />
+          <ScalarProperty Name="ServiceListingStatusID" ColumnName="ServiceListingStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserEmailAddress" ColumnName="UserEmailAddress" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VATs">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.VAT">
+        <MappingFragment StoreEntitySet="VAT">
+          <ScalarProperty Name="VATID" ColumnName="VATID" />
+          <ScalarProperty Name="VATPercentage" ColumnName="VATPercentage" />
+          <ScalarProperty Name="InitiationDate" ColumnName="InitiationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vendors">
+      <EntityTypeMapping TypeName="ArtelierAvenueModel.Vendor">
+        <MappingFragment StoreEntitySet="Vendor">
+          <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+          <ScalarProperty Name="VendorName" ColumnName="VendorName" />
+          <ScalarProperty Name="VendorDescription" ColumnName="VendorDescription" />
+          <ScalarProperty Name="Established" ColumnName="Established" />
+          <ScalarProperty Name="Hoit" ColumnName="Hoit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="WishList" TypeName="ArtelierAvenueModel.WishList" StoreEntitySet="WishList">
+      <EndProperty Name="Product">
+        <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+      </EndProperty>
+      <EndProperty Name="Client">
+        <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Brand Registration";
+}
+
+<div class="border-container center" style="width:80%;">
+    <div class="sign-in-container center">
+        <form>
+            <h2 class="page-heading">Brand Application</h2>
+            <br />
+            <div class="form-group">
+                <img src="~/Resources/qmark.png" class="thumbnail register-pic center" />
+                <label for="logo">Brand logo:</label>
+                <input type="file" class="form-control page-input center" id="logo">
+            </div>
+            <div class="form-group">
+                <label for="name">Brand Name:</label>
+                <input type="text" class="form-control page-input center" placeholder="Enter full name" id="name">
+            </div>
+            <div class="form-group">
+                <label for="number">Contact number:</label>
+                <input type="number" class="form-control page-input center" placeholder="Enter cellphone numWber" id="number">
+            </div>
+            <div class="form-group">
+                <label for="email">Contact email address:</label>
+                <input type="email" class="form-control page-input center" placeholder="Enter email" id="email">
+            </div>
+            <div class="form-group">
+                <label for="website">Website URL:</label>
+                <input type="url" class="form-control page-input center" placeholder="Enter website address" id="website">
+            </div>
+            <div>
+                <h3 class="subheading">Social Media</h3>
+                <p>Enter the links to your social media profiles so that we can link to them in your profile</p>
+                <div class="form-group">
+                    <label for="email">Facebook link:</label>
+                    <input type="email" class="form-control page-input center" placeholder="Enter facebook link" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="email">Instagram link:</label>
+                    <input type="email" class="form-control page-input center" placeholder="Enter instagram link" id="email">
+                </div>
+            </div>
+            <div>
+                <h3 class="subheading">Description</h3>
+                <p> Tell us about your brand. What is you brand about? What is your inspiration? tell us about your origin, your background. This is not just for us, but will be accessable to all those who visit the site</p>
+                <div class="form-group">
+                    <label for="intro">1st Paragraph:</label>
+                    <br />
+                    <textarea class=" page-input paragraph-input" placeholder="Introduction" id="intro" rows="5" cols="100"> </textarea>
+                </div>
+                <div class="form-group">
+                    <label for="body">2nd Paragraph:</label>
+                    <br />
+                    <textarea class=" page-input paragraph-input" placeholder="Body" id="body" rows="5" cols="100"> </textarea>
+                </div>
+                <div class="form-group">
+                    <label for="con">3rd Paragraph:</label>
+                    <br />
+                    <textarea class=" page-input paragraph-input" placeholder="Conclusion" id="con" rows="5" cols="100"> </textarea>
+                </div>
+            </div>
+            <div class="custom-btn from-bottom">Register</div>
+        </form>
+    </div>
+</div>

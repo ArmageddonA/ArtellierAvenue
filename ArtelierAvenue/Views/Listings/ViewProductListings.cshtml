@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ArtelierAvenue.Models.ProductListing>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductListingName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductListingPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductListingDate)
+        </th>
+        <th>
+            Client
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ListingStatu.ListingDescription)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductListingName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductListingPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductListingDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Client.User.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ListingStatu.ListingDescription)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProductListingID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProductListingID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProductListingID })
+        </td>
+    </tr>
+}
+
+</table>

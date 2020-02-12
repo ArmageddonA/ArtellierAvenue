@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+
+    <div class="border-container center">
+        <div class="sign-in-container center">
+            <form>
+                <h2 class="page-heading">Register</h2>
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" class="form-control page-input center" placeholder="Enter full name" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" class="form-control page-input center" placeholder="Enter username" id="username">
+                </div>
+                <div class="form-group">
+                    <label for="number">Cellphone number:</label>
+                    <input type="number" class="form-control page-input center" placeholder="Enter cellphone number" id="number">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" class="form-control page-input center" placeholder="Enter email" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control page-input center" placeholder="Enter password" id="pwd">
+                </div>
+                <div class="form-group">
+                    <label for="cpwd">Password:</label>
+                    <input type="password" class="form-control page-input center" placeholder="Confirm password" id="cpwd">
+                </div>
+                <div class="custom-btn from-bottom">Register</div>
+                <div class="custom-btn from-top">Sign in</div>
+                <div>Register as a brand? <a href="@Url.Action("RegisterBrand", "Brand")">Click Here</a> </div>
+            </form>
+    </div>
+</div>

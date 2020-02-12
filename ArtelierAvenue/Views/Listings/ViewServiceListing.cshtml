@@ -1,0 +1,97 @@
+﻿
+@{
+    ViewBag.Title = "ViewProduct";
+}
+
+    <div class="container">
+        <div class="profile-side-info floating-side-info">
+            <div class="profile-basic-information">
+                User: <br />
+                Bob Dylan
+                <hr />
+                Date placed: <br />
+                1 January 2020
+                <hr />
+                Service: <br />
+                Model
+                <hr />
+                Social Media:
+                <br />
+                <i class="fab fa-facebook-square facebook-icon profile-icon"></i>
+                <i class="fab fa-instagram instagram-icon profile-icon"></i>
+                <hr />
+                <div class="">CONTACT NOW</div>
+            </div>
+        </div>
+
+        <div class="listing-pics-container">
+            <h1 class="page-heading product-heading show-on-scroll">User portfolio</h1>
+            <img class="listing-img show-on-scroll" src="https://via.placeholder.com/700x800" />
+            <img class="listing-img show-on-scroll" src="https://via.placeholder.com/700x800" />
+            <img class="listing-img show-on-scroll" src="https://via.placeholder.com/700x800" />
+            <img class="listing-img show-on-scroll" src="https://via.placeholder.com/700x800" />
+            <img class="listing-img show-on-scroll" src="https://via.placeholder.com/700x800" />
+            <img class="listing-img show-on-scroll" src="https://via.placeholder.com/700x800" />
+            <div class="container" style="width:100%">
+                <h2 class="sub-heading" >Information</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, ex quo senserit indoctum suavitate. Ei mel animal tibique ocurreret, at soluta malorum debitis sit. Eu mel lorem movet voluptatibus, at augue falli laboramus mei. Partiendo democritum ut mei, dissentiet neglegentur cum at. Illum phaedrum oportere pri no, ne case inermis sea, fierent convenire delicatissimi eu nam. Pro ei aliquam reprehendunt, novum consulatu percipitur cu usu. Laboramus abhorreant per ne.
+                </p>
+                <p>
+                    Atqui iuvaret erroribus qui ut, mutat regione expetendis ad eos. Sea ad equidem honestatis, duo id timeam vivendo. Dolorum scriptorem intellegebat an vim, cum an illum vituperata adversarium, agam lorem ornatus cu sit. No forensibus constituto mea, est sale vivendo delectus an.
+                </p>
+                <p>
+
+                    Ei quis affert impetus mea, prima nusquam his no, no menandri molestiae vis. No accusam eleifend posidonium his, vix omittam scriptorem ex, ferri volutpat et sed. Ut nec placerat pertinax repudiare. Error integre qualisque vim ei, cum ne autem omnium luptatum. Eos at dicat delectus adipisci, ut eam legere feugait.
+                </p>
+            </div>
+        </div>
+
+       
+    </div>
+@section scripts {
+    <script type="text/javascript">
+        // Detect request animation frame
+        var scroll = window.requestAnimationFrame ||
+            // IE Fallback
+            function (callback) { window.setTimeout(callback, 1000 / 60) };
+        var elementsToShow = document.querySelectorAll('.show-on-scroll');
+        var elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+
+        function loop() {
+
+            Array.prototype.forEach.call(elementsToShow, function (element) {
+                if (isElementInViewport(element)) {
+                    element.classList.add('is-visible');
+                } else {
+                    element.classList.remove('is-visible');
+                }
+            });
+
+
+            scroll(loop);
+        }
+
+        // Call the loop for the first time
+        loop();
+
+        // Helper function from: http://stackoverflow.com/a/7557433/274826
+        function isElementInViewport(el) {
+            // special bonus for those using jQuery
+            if (typeof jQuery === "function" && el instanceof jQuery) {
+                el = el[0];
+            }
+            var rect = el.getBoundingClientRect();
+            return (
+                (rect.top <= 0
+                    && rect.bottom >= 0)
+                ||
+                (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+                ||
+                (rect.top >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+            );
+        }
+    </script>
+}

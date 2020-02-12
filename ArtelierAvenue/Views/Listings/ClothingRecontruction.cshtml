@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "AVENUE SERVICES | CLOTHING RECONSTRUCTION";
+}
+
+<div>
+    <h2 class="page-heading">Avenue Services</h2>
+    <h3 class="sub-heading">Clothing Recontruction</h3>
+</div>
+<hr />
+<div>
+    <div class="service-listing-section show-on-scroll">
+        <a class="service-listing-heading animate-on-scroll">Model's name <span class="glyphicon glyphicon-chevron-right section-icon"></span>   </a>
+        <div>
+            <img class="service-listing-pic" src="https://via.placeholder.com/200" alt="New York" />
+            <img class="service-listing-pic" src="https://via.placeholder.com/200" alt="New York" />
+            <img class="service-listing-pic" src="https://via.placeholder.com/200" alt="New York" />
+            <img class="service-listing-pic" src="https://via.placeholder.com/200" alt="New York" />
+            <img class="service-listing-pic" src="https://via.placeholder.com/200" alt="New York" />
+            <img class="service-listing-pic" src="https://via.placeholder.com/200" alt="New York" />
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script type="text/javascript">
+        // Detect request animation frame
+        var scroll = window.requestAnimationFrame ||
+            // IE Fallback
+            function (callback) { window.setTimeout(callback, 1000 / 60) };
+        var elementsToShow = document.querySelectorAll('.show-on-scroll');
+        var elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+
+        function loop() {
+
+            Array.prototype.forEach.call(elementsToShow, function (element) {
+                if (isElementInViewport(element)) {
+                    element.classList.add('is-visible');
+                } else {
+                    element.classList.remove('is-visible');
+                }
+            });
+            Array.prototype.forEach.call(elementsToAnimate, function (element) {
+                if (isElementInViewport(element)) {
+                    element.classList.add('is-visible');
+                } else {
+                    element.classList.remove('is-visible');
+                }
+            });
+            scroll(loop);
+        }
+
+        // Call the loop for the first time
+        loop();
+
+        // Helper function from: http://stackoverflow.com/a/7557433/274826
+        function isElementInViewport(el) {
+            // special bonus for those using jQuery
+            if (typeof jQuery === "function" && el instanceof jQuery) {
+                el = el[0];
+            }
+            var rect = el.getBoundingClientRect();
+            return (
+                (rect.top <= 0
+                    && rect.bottom >= 0)
+                ||
+                (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+                ||
+                (rect.top >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+            );
+        }
+    </script>
+}

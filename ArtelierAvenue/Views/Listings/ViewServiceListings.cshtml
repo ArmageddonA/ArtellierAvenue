@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ArtelierAvenue.Models.ServiceListing>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceListingDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.ClientID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ListingStatu.ListingDescription)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ServiceListingDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Client.ClientID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ListingStatu.ListingDescription)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ServiceListingID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ServiceListingID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ServiceListingID })
+        </td>
+    </tr>
+}
+
+</table>
